@@ -2,7 +2,6 @@
 
 Workshop of an example of a proyect based on Web Traffic Time Series Forecasting.
 
-
 ## Day 1
 
 1. Project structure
