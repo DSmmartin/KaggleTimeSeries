@@ -6,7 +6,8 @@
     "cluster_name": "kaggle",
     "spark_version": "6.2.x-scala2.11",
     "spark_conf": {
-        "spark.databricks.delta.preview.enabled": "true"
+        "spark.databricks.delta.preview.enabled": "true",
+        "spark.databricks.service.server.enabled": "true"
     },
     "node_type_id": "Standard_DS3_v2",
     "driver_node_type_id": "Standard_DS3_v2",
