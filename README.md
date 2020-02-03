@@ -6,7 +6,7 @@ An example of a proyect based on Web Traffic Time Series Forecasting
 
 1. Project structure
 
-    - Starting with project strcuture. Folders architecture of a package.
+    - Starting with project strcuture. Folders architecture of a package. Test conda dependencies and package build (pip install . &  python setup.py bdist_wheel).
     - Preparing the environment and dependencies
 
 2. Package developing.
