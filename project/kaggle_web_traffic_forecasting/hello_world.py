@@ -8,8 +8,8 @@ spark = SparkSession\
 
 print("Testing simple count")
 
-print(spark.range(100).count())
-
-
 dbutils = DBUtils(spark.sparkContext)
 print(dbutils.fs.ls("dbfs:/"))
+
+print('--------')
+print(dbutils.secrets.listScopes())
