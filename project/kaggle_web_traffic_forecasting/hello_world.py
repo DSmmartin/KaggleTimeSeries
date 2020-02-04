@@ -20,13 +20,17 @@ dbutils.secrets.setToken(token_48h)
 storage_name = dbutils.secrets.get(scope='kaggle-storage', key='storage-name')
 storage_key = dbutils.secrets.get(scope='kaggle-storage', key='storage-key')
 storage_container_name = 'dataraw'
+mount_point = "/mnt/kaggle-data-raw/"
 
-extra_configs = {
-    "fs.azure.account.key.{storage_container_name}.blob.core.windows.net": storage_key
-}
+key = spark.read.csv(f'{mount_point}key_1.csv',
+                     sep=',',
+                     header=True,
+                     inferSchema=True)
 
-dbutils.fs.mount(
-    source = f'wasbs://{storage_container_name}@{storage_name}.blob.core.windows.net/',
-    mount_point = "/mnt/kaggle-data-raw/",
-    extra_configs = extra_configs)
+train = spark.read.csv(f'{mount_point}train_1.csv',
+                     sep=',',
+                     header=True,
+                     inferSchema=True)
 
+
+print('end ml process')
