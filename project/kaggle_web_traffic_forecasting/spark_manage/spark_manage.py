@@ -2,10 +2,9 @@ import pyspark
 import os
 import sys
 
-def spark_start(task_name, show_output=False):
+def spark_start(show_output=False):
     print("Starting Spark")
-    spark = pyspark.sql.SparkSession.builder.appName(task_name) \
-                                            .getOrCreate()
+    spark = pyspark.sql.SparkSession.builder.getOrCreate()
 
     if show_output:
         print("Spark configuration")

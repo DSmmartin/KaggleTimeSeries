@@ -1,6 +1,4 @@
+from pyspark.dbutils import DBUtils
 from kaggle_web_traffic_forecasting import spark_start
 
-
-spark = spark_start(task_name='hello_world',
-                    show_output=True)
-
+spark = spark_start(show_output=True)
