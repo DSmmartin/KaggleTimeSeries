@@ -1,0 +1,13 @@
+{
+	"name": "Python file",
+	"dockerFile": "Dockerfile",
+	"appPort": [9000],
+	"context": "..",
+	"extensions": [
+		"ms-python.python",
+		"ms-python.anaconda-extension-pack",
+		"njpwerner.autodocstring",
+		"shardulm94.trailing-spaces",
+		"visualstudioexptteam.vscodeintellicode"
+	]
+}

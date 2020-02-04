@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "CONDA_PATH/anaconda3/envs/kaggle_web_traffic_forecasting/bin/python",
+    "python.linting.enabled": false,
+    "python.venvPath": "CONDA_PATH/anaconda3/envs/kaggle_web_traffic_forecasting/lib/python3.7/site-packages/pyspark/jars"
+}
