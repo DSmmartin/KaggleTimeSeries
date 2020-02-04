@@ -15,8 +15,18 @@ print('--------')
 print(dbutils.secrets.listScopes())
 
 print('--------')
-token_48h = 'TOKE_48h'
+token_48h = 'dkea854ad26b80bd5286d77364ab509fc377'
 dbutils.secrets.setToken(token_48h)
-print(dbutils.secrets.get(scope='kaggle-storage', key='storage-name'))
-print(dbutils.secrets.get(scope='kaggle-storage', key='storage-key'))
+storage_name = dbutils.secrets.get(scope='kaggle-storage', key='storage-name')
+storage_key = dbutils.secrets.get(scope='kaggle-storage', key='storage-key')
+storage_container_name = 'dataraw'
+
+extra_configs = {
+    "fs.azure.account.key.{storage_container_name}.blob.core.windows.net": storage_key
+}
+
+dbutils.fs.mount(
+    source = f'wasbs://{storage_container_name}@{storage_name}.blob.core.windows.net/',
+    mount_point = "/mnt/kaggle-data-raw/",
+    extra_configs = extra_configs)
 
