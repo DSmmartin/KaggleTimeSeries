@@ -1,7 +1,7 @@
 {
 	"name": "Python file",
 	"dockerFile": "Dockerfile",
-	"appPort": [9000],
+	"appPort": [9000, 8888, 4040],
 	"context": "..",
 	"extensions": [
 		"ms-python.python",
