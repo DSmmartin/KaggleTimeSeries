@@ -130,3 +130,7 @@ dmypy.json
 
 # VScode
 project/.vscode/settings.json
+.vscode/
+
+# Project
+mount/
