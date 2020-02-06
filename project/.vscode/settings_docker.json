@@ -1,4 +1,0 @@
-{
-    "python.linting.enabled": true,
-    "python.pythonPath": "/opt/conda/envs/kaggle_web_traffic_forecasting/bin/python",
-}
