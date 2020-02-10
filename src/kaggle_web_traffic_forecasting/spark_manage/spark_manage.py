@@ -17,7 +17,8 @@ def spark_start(show_output=False):
     """
 
     print("Starting Spark")
-    spark = pyspark.sql.SparkSession.builder.getOrCreate()
+    spark = pyspark.sql.SparkSession.builder.config("spark.jars.packages", "io.delta:delta-core_2.11:0.5.0"). \
+            getOrCreate()
 
     if show_output:
         print("Spark configuration")
