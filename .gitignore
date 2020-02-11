@@ -133,4 +133,4 @@ project/.vscode/settings.json
 .vscode/
 
 # Project
-mount/
+src/mnt/
